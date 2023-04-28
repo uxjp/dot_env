@@ -1,14 +1,9 @@
-name: Hello world workflow
+name: Print environment variable
 on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Print hello world
-      run: echo "Hello, world!"
-    - name: Print secret variable
-      run: echo "The value of MY_SECRET_VARIABLE is ${{ secrets.MY_SECRET_VARIABLE }}"
-
     - name: Print environment variable
       run: echo "The value of REPOS_VISIBLE_TO_ALL_VAR is $REPOS_VISIBLE_TO_ALL_VAR"
