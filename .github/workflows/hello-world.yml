@@ -7,3 +7,5 @@ jobs:
     steps:
     - name: Print hello world
       run: echo "Hello, world!"
+    - name: Print secret variable
+      run: echo "The value of MY_SECRET_VARIABLE is ${{ secrets.MY_SECRET_VARIABLE }}"
