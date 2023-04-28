@@ -10,5 +10,5 @@ jobs:
     - name: Print secret variable
       run: echo "The value of MY_SECRET_VARIABLE is ${{ secrets.MY_SECRET_VARIABLE }}"
 
-    - name: Print Action variable
-      run: echo "The value of REPOS_VISIBLE_TO_ALL_VAR is ${{ env.REPOS_VISIBLE_TO_ALL_VAR }}"
+    - name: Print environment variable
+      run: echo "The value of REPOS_VISIBLE_TO_ALL_VAR is $REPOS_VISIBLE_TO_ALL_VAR"
