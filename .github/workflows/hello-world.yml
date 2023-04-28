@@ -1,0 +1,11 @@
+name: Print environment variable
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print environment variable
+      run: echo "The value of LATA is $LATA"
+    - name: Print environment variable other syntax
+      run: echo "The value of LATA is ${{ env.LATA }}"
