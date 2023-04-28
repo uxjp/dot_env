@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print environment variable
-      run: echo "The value of REPOS_VISIBLE_TO_ALL_VAR is $REPOS_VISIBLE_TO_ALL_VAR"
+      run: echo "The value of REPOS_VISIBLE_TO_ALL_VAR is ${{ env.REPOS_VISIBLE_TO_ALL_VAR }}"
