@@ -23,5 +23,5 @@ jobs:
 
     - name: Run Docker Image
       run: |
-        docker run dot_env
+        docker run -v "$(pwd)/.env:/.env" dot_env
 
