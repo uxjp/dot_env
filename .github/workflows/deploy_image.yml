@@ -19,7 +19,7 @@ jobs:
         echo "Somebody to love" > .env
 
     - name: Exploring Container
-      run: ls
+      run: ls -a
 
     - name: Run Docker Image
       run: |
