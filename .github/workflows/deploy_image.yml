@@ -25,7 +25,7 @@ jobs:
       run: echo $(pwd)
 
     - name: Playing with current directory
-      run: cat "$(pwd)./env"
+      run: cat "$(pwd)/.env"
 
     - name: Run Docker Image
       run: |
