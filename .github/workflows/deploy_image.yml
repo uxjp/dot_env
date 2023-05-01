@@ -24,7 +24,10 @@ jobs:
     - name: Playing with current directory
       run: echo $(pwd)
 
+    - name: Playing with current directory
+      run: cat "$(pwd)./env"
+
     - name: Run Docker Image
       run: |
-        docker run -v ".env:/.env" dot_env
+        docker run -v "$(pwd)/.env:/.env" dot_env
 
