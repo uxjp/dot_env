@@ -16,12 +16,15 @@ jobs:
 
     - name: Create .env file
       run: |
-        echo "Somebody to love" > .env
+        echo "I'm Going Slightly Mad" > .env
 
     - name: Exploring Container
       run: ls -a
 
+    - name: Playing with current directory
+      run: echo $(pwd)
+
     - name: Run Docker Image
       run: |
-        docker run -v "$(pwd)/.env:/.env" dot_env
+        docker run -v ".env:/.env" dot_env
 
