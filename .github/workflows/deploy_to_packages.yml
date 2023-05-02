@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set variable
-        run: echo "::set-env name=MY_VARIABLE::__image_custom_name_"
-
-      - name: Print variable
-        run: echo $MY_VARIABLE
+        env:
+          MY_VARIABLE: my-value
+        run: echo "Variable value is $MY_VARIABLE"
 
   deploy-to-dockerhub:
     runs-on: ubuntu-latest
