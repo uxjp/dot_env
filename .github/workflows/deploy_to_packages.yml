@@ -5,14 +5,6 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  set-and-print:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set variable
-        env:
-          MY_VARIABLE: my-value
-        run: echo "Variable value is $MY_VARIABLE ${{ env.IMAGE_NAME }}"
-
   deploy-to-dockerhub:
     runs-on: ubuntu-latest
     steps:
