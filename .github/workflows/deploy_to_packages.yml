@@ -3,7 +3,7 @@ name: Creating and Testing a GitHub Package
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   REGISTRY: ghcr.io
