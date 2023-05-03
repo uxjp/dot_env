@@ -1,6 +1,10 @@
 name: Creating and Testing a GitHub Package
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
+
 env:
   REGISTRY: ghcr.io
   DOCKER_IMAGE_NAME: ${{ github.repository }}
