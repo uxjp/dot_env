@@ -50,7 +50,10 @@ jobs:
           echo "KEY=I'm Going Slightly Mad" > .env
       
       - name: Pull Docker image
-        run: docker pull uxjp/dot_env
+        run: docker pull ghcr.io/uxjp/dot_env:latest 
+
+      - name: list images
+        run: docker image ls -a
       
       - name: Run Docker container
         run: docker run -v "$(pwd)/.env:/.env" uxjp/dot_env
