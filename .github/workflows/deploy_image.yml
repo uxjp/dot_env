@@ -1,0 +1,33 @@
+name: Build and Run Docker Image
+
+on: [push]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Docker Image
+      run: |
+        docker build -t dot_env .
+
+    - name: Create .env file
+      run: |
+        echo "KEY=I'm Going Slightly Mad" > .env
+
+    - name: Exploring Container
+      run: ls -a
+
+    - name: Playing with current directory
+      run: echo $(pwd)
+
+    - name: Playing with current directory
+      run: cat "$(pwd)/.env"
+
+    - name: Run Docker Image
+      run: |
+        docker run -v "$(pwd)/.env:/.env" dot_env
+
